@@ -15,7 +15,8 @@ module Gabba
     BEACON_PATH = "/__utm.gif"
     USER_AGENT = "Gabba #{VERSION} Agent"
     
-    attr_accessor :utmwv, :utmn, :utmhn, :utmcs, :utmul, :utmdt, :utmp, :utmac, :utmt, :utmcc, :user_agent
+    attr_accessor :utmwv, :utmn, :utmhn, :utmcs, :utmul, :utmdt, :utmp
+    attr_accessor :utmac, :utmt, :utmcc, :user_agent, :utmr
     
     def initialize(ga_acct, domain, agent = Gabba::USER_AGENT)
       @utmwv = "4.4sh" # GA version
@@ -42,6 +43,7 @@ module Gabba
         :utmhn => @utmhn,
         :utmcs => @utmcs,
         :utmul => @utmul,
+        :utmr => @utmr,
         :utmdt => title,
         :utmhid => utmhid,
         :utmp => page,
